@@ -2,7 +2,24 @@ body {
   margin: 0;
   padding: 0; }
 
+.color_orange {
+  color: #ff8b38;
+  font-weight: 300; }
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+  /* 1 */ }
+
 .nav {
+  z-index: 1;
   width: 100%;
   height: 70px;
   background-color: black;
@@ -22,9 +39,6 @@ body {
       color: #dd6a16; }
     .nav .nav__hamburger:focus {
       color: #dd6a16; }
-  .nav .nav__color_orange {
-    color: #ff8b38;
-    font-weight: 300; }
   .nav .nav__logo {
     margin-left: 150px; }
     .nav .nav__logo a {
@@ -78,3 +92,126 @@ body {
         line-height: 40px; }
     .nav .nav__menu .menu.active {
       height: 200px; } }
+
+.header {
+  width: 100%;
+  height: 710px;
+  background-image: url("imgs/header-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; }
+  .header .header__heading {
+    width: 590px; }
+    .header .header__heading h1 {
+      font-size: 100px;
+      color: #ffffff;
+      font-family: Raleway;
+      text-transform: uppercase; }
+    .header .header__heading h2 {
+      margin-top: -55px;
+      color: #ffffff;
+      font-family: Raleway;
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 40px; }
+      .header .header__heading h2::after {
+        content: "";
+        width: 100px;
+        height: 2px;
+        margin-top: 40px;
+        background-color: white;
+        display: block; }
+    .header .header__heading p {
+      color: #707174;
+      font-family: Raleway;
+      font-size: 20px; }
+    .header .header__heading button {
+      width: 135px;
+      height: 42px;
+      background-color: transparent;
+      color: #ffffff;
+      font-family: Raleway;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: 0.5s;
+      border: 2px solid #ffffff;
+      margin-top: 20px; }
+      .header .header__heading button:hover {
+        background-color: #ffffff;
+        color: #000000; }
+      .header .header__heading button:focus {
+        background-color: #ffffff;
+        color: #000000; }
+  .header .header__signup {
+    width: 360px; }
+    .header .header__signup p {
+      color: #333333;
+      font-family: Raleway;
+      font-size: 25px;
+      background-color: #f5f5f5;
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      width: 100%; }
+    .header .header__signup form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffffff;
+      margin-top: -25px;
+      height: 255px;
+      position: relative; }
+      .header .header__signup form input {
+        height: 32px;
+        width: 75%;
+        font-family: Raleway;
+        border: none;
+        border-bottom: 1px solid #d6d6d6;
+        padding-left: 18px;
+        font-size: 14px;
+        font-weight: 300;
+        outline: none;
+        transition: 0.2s; }
+        .header .header__signup form input:focus {
+          border-bottom: 1px solid #000000; }
+      .header .header__signup form input:not(:first-child) {
+        margin-top: 30px; }
+      .header .header__signup form input:last-of-type {
+        margin-bottom: 50px; }
+      .header .header__signup form button {
+        width: 100%;
+        height: 54px;
+        position: absolute;
+        bottom: -54px;
+        background-color: #ff9b51;
+        border: none;
+        color: #ffffff;
+        font-family: Raleway;
+        font-size: 18px;
+        font-weight: 400;
+        cursor: pointer;
+        transition: 0.2s; }
+        .header .header__signup form button:hover {
+          background-color: #ff8b38; }
+        .header .header__signup form button:focus {
+          background-color: #ff8b38; }
+
+@media (max-width: 949px) {
+  .header {
+    height: 1100px;
+    text-align: center; }
+    .header .header__heading {
+      margin-bottom: -190px; }
+      .header .header__heading h2::after {
+        margin-left: auto;
+        margin-right: auto; } }
+
+@media (max-width: 526px) {
+  .header {
+    height: 1200px; } }
