@@ -298,6 +298,7 @@ body {
       display: flex;
       flex-direction: column; }
       .features .features-tabs .features__buttons-group button {
+        transition: 0.5s;
         width: 110px;
         height: 112px;
         background-color: #333333;
@@ -311,6 +312,10 @@ body {
         cursor: pointer; }
         .features .features-tabs .features__buttons-group button:hover {
           background-color: #ff8b38; }
+        .features .features-tabs .features__buttons-group button:focus {
+          background-color: #ff8b38; }
+      .features .features-tabs .features__buttons-group .features-btn.active {
+        background-color: #ff8b38; }
     .features .features-tabs .features-tab {
       visibility: hidden;
       height: 307px;
@@ -390,3 +395,53 @@ body {
 @media (max-width: 330px) {
   .features .features-tabs .features__buttons-group button {
     width: 100px; } }
+
+.sub-list {
+  width: 100%;
+  height: 596px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .sub-list .sub-list__content {
+    width: 473px; }
+    .sub-list .sub-list__content h3 {
+      font-family: Raleway;
+      font-weight: 700;
+      font-size: 22px; }
+      .sub-list .sub-list__content h3::after {
+        content: "";
+        width: 70px;
+        height: 2px;
+        background-color: #ff8b38;
+        margin-top: 29px;
+        display: block; }
+    .sub-list .sub-list__content p {
+      color: #86878b;
+      font-family: Raleway;
+      font-size: 16px;
+      margin-bottom: 45px; }
+    .sub-list .sub-list__content .sub-list__content-block span {
+      float: left;
+      color: #ff8b38; }
+    .sub-list .sub-list__content .sub-list__content-block .sub-list__content-block_text {
+      margin-left: 65px; }
+      .sub-list .sub-list__content .sub-list__content-block .sub-list__content-block_text h4 {
+        font-family: Raleway; }
+      .sub-list .sub-list__content .sub-list__content-block .sub-list__content-block_text p {
+        margin-top: -15px; }
+
+@media (max-width: 1015px) {
+  .sub-list {
+    text-align: center; }
+    .sub-list img {
+      display: none; }
+    .sub-list .sub-list__content h3::after {
+      margin-left: auto;
+      margin-right: auto; }
+    .sub-list .sub-list__content p {
+      margin: 0; }
+    .sub-list .sub-list__content .sub-list__content-block span {
+      margin-top: 8px;
+      float: none; }
+    .sub-list .sub-list__content .sub-list__content-block .sub-list__content-block_text {
+      margin: 0; } }

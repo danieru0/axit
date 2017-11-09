@@ -17,7 +17,11 @@
             document.querySelectorAll('.features-tab.active').forEach(function(item) {
                 item.classList.remove('active');
             });
+            document.querySelectorAll('.features-btn.active').forEach(function(item) {
+                item.classList.remove('active');
+            });
             tabs[this.value].className += ' active';
+            featuresBtn[this.value].className += ' active';
         });
     }
 })();
