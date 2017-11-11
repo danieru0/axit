@@ -1029,4 +1029,104 @@ body {
 .contact {
     width: 100%;
     height: 612px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h3 {
+        margin: 0;
+        font-family: Raleway;
+        font-size: 40px;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin-bottom: 10px;
+        text-align: center;
+        &::after {
+            content: "";
+            width: 70px;
+            height: 2px;
+            display: block;
+            background-color: #ff8b38;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 25px;
+        }
+    }
+    p {
+        text-align: center;
+        font-family: Raleway;
+        color: #86878b;
+    }
+    form {
+        ::-webkit-input-placeholder {
+            color: #bdbdbd;
+        }
+        ::-moz-placeholder {
+            color: #bdbdbd;
+            opacity: 1;
+        }
+        :-moz-placeholder {
+            color: #bdbdbd;
+            opacity: 1;
+        }
+        :-ms-input-placeholder {
+            color: #bdbdbd;
+        }
+        ::-ms-input-placeholder {
+            color: #bdbdbd;
+        }
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        margin-top: 70px;
+        .contact__form-inputs {
+            display: flex;
+            flex-direction: column;
+            width: 45%;
+            input {
+                height: 32px;
+                border: none;
+                margin-bottom: 40px;
+                border-bottom: 1px solid #d6d6d6;
+                padding-left: 15px;
+                font-size: 15px;
+                color: #bdbdbd;
+                outline: none;
+                transition: 0.2s;
+                &:focus {
+                    color: #000000;
+                    border-bottom: 1px solid #000000;
+                }
+            }
+        }
+        textarea {
+            width: 45%;
+            height: 170px;
+            border: none;
+            color: #bdbdbd;
+            border-bottom: 1px solid #d6d6d6;
+            padding-left: 15px;
+            padding-top: 13px;
+            font-size: 15px;
+            outline: none;
+            transition: 0.2s;
+            resize: none;
+            &:focus {
+                border-bottom: 1px solid #000000;
+                color: #000000;
+            }
+        }
+        button {
+            position: absolute;
+            bottom: -45px;
+            @include button(#ff9b51);
+            &:hover {
+                background-color: #ff8b38;
+            }
+            &:focus {
+                background-color: #ff8b38;
+            }
+        }
+    }
 }
