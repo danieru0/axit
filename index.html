@@ -18,11 +18,11 @@
         <button class="nav__hamburger" id="nav-hamburger"><span class="fa fa-bars fa-2x" aria-hidden="true"></span></button>
         <div class="nav__menu">
             <ul class="menu" id="menu">
-                <li class="menu__item"><a href="#">Features</a></li>
-                <li class="menu__item"><a href="#">About</a></li>
-                <li class="menu__item"><a href="#">Pricing</a></li>
-                <li class="menu__item"><a href="#">Reviews</a></li>
-                <li class="menu__item"><a href="#">Contact</a></li>
+                <li class="menu__item"><a data-scroll href="#features">Features</a></li>
+                <li class="menu__item"><a data-scroll href="#about">About</a></li>
+                <li class="menu__item"><a data-scroll href="#pricing">Pricing</a></li>
+                <li class="menu__item"><a data-scroll href="#reviews">Reviews</a></li>
+                <li class="menu__item"><a data-scroll href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -65,7 +65,7 @@
             </div>
         </div>
     </section>
-    <section class="features">
+    <section class="features" id="features">
        <div class="features-tabs">
             <div class="features__buttons-group">
                 <button class="features-btn active" value="0">tab 1</button>
@@ -127,7 +127,7 @@
         </div>
         <img src="imgs/sub-list-righ.png" alt="">
     </article>
-    <section class="process">
+    <section class="process" id="about">
         <h3>Why this is awesome</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <div class="process__content">
@@ -157,7 +157,7 @@
             </div>
         </div>
     </section>
-    <section class="pricing">
+    <section class="pricing" id="pricing">
         <h3>Pricing options</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <div class="pricing__content">
@@ -202,7 +202,7 @@
             </ul>
         </div>
     </section>
-    <section class="testimonials">
+    <section class="testimonials" id="reviews">
         <h3>What our customers are saying</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <div class="testimonials__content">
@@ -249,7 +249,7 @@
         <p>Use the sections you need, remove the ones you don't.  Create gorgeous prototypes faster than ever!</p>
         <button>Download</button>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
         <h3>Contact us</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <form>
@@ -279,5 +279,9 @@
         <p> 2015 Axure Themes</p>
     </footer>
 <script src="js/main.js"></script>
+<script src="js/smooth-scroll.min.js"></script>
+<script>
+    var scroll = new SmoothScroll('a[href*="#"]');
+</script>
 </body>
 </html>
