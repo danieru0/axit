@@ -387,10 +387,13 @@ body {
       .features .features-tabs .features__buttons-group {
         flex-direction: row; }
       .features .features-tabs .features-content {
-        display: flex;
-        justify-content: center; }
+        display: flex; }
         .features .features-tabs .features-content .features-tab {
-          margin: 0; } }
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin-left: auto;
+          margin-right: auto; } }
 
 @media (max-width: 588px) {
   .features .features-tabs .features-tab {
@@ -610,7 +613,8 @@ body {
         background-color: #333333;
         margin-top: 2px;
         position: relative; }
-        .pricing .pricing__content .pricing__content-block .content-block__item-price .price::first-letter {
+        .pricing .pricing__content .pricing__content-block .content-block__item-price .price::before {
+          content: "\0024";
           font-size: 35px; }
         .pricing .pricing__content .pricing__content-block .content-block__item-price p {
           font-size: 16px;
@@ -875,6 +879,10 @@ body {
     .contact form button {
       position: absolute;
       bottom: -45px;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
       width: 135px;
       height: 42px;
       background-color: #ff9b51;

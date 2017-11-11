@@ -495,9 +495,12 @@ body {
             }
             .features-content {
                 display: flex;
-                justify-content: center;
                 .features-tab {
-                    margin: 0;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin-left: auto;
+                    margin-right: auto;
                 }
             }
         }
@@ -803,7 +806,8 @@ body {
                 background-color: #333333;
                 margin-top: 2px;
                 position: relative;
-                .price::first-letter {
+                .price::before {
+                    content: "\0024";
                     font-size: 35px;
                 }
                 p {
@@ -1131,6 +1135,10 @@ body {
         button {
             position: absolute;
             bottom: -45px;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
             @include button(#ff9b51);
             &:hover {
                 background-color: #ff8b38;
